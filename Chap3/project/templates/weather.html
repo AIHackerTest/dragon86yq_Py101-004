@@ -1,0 +1,12 @@
+{% extends "base_index.html" %}
+{% block content %}
+    <p  align="center">
+    {% if weather %}
+        {% for city_name, info in weather.items() %}
+            {{city_name}}    :   {{info[0]}}度,    {{info[1]}},    {{info[2].dir}},    湿度{{info[3]}}
+        {% endfor %}
+    {% else %}
+        输入的城市名不正确，请重新输入
+    {% endif %}
+    </p>
+{% endblock %}

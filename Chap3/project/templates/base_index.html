@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <body>
+      <h1 align="center">天气查询</h1>
+      <div style="width:100%; text-align:center">
+      <form  align="center"   action="/user">
+          城市：
+          <input type="text" name="city"  >
+          <input type="submit" name="action" value="查询">
+          <input type="submit" name="action" value="帮助">
+          <input type="submit" name="action" value="历史">
+      </form>
+        {% block content %}{% endblock %}
+        </div>
+    </body>
+</html>
+
+

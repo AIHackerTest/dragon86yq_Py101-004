@@ -1,0 +1,13 @@
+{% extends "base_index.html" %}
+{% block content %}
+<p  align="center">
+    {% if weather_history %}
+        {% for city_name,info in weather_history.items() %}
+             {{city_name}}   :   {{info[0]}}度,   {{info[1]}},    {{info[2].dir}},    湿度{{info[3]}} <br>
+         {% endfor %}
+    {% else %}
+        无历史查询记录<br>
+        {{weather_history}}
+    {% endif %}
+</p>
+{% endblock %}
